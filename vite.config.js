@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  base: '/test21t/',
+  base: '/frontend-project-V2/',
   build: {
     emptyOutDir: true,
     modulePreload: { polyfill: false },
