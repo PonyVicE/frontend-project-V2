@@ -1,0 +1,43 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-inverse);
+  padding-top: 90px;
+  padding-bottom: 40px;
+  gap: 8px;
+}
+
+.breadcrumbs__link {
+  font-family: Lato, sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--text-inverse-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__link:hover {
+  color: var(--primary);
+}
+
+.breadcrumbs__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.breadcrumbs__current {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--text-inverse-secondary);
+}
+
+.breadcrumbs__separator {
+  display: flex;
+  align-items: center;
+  color: var(--text-inverse-secondary);
+}

@@ -1,0 +1,135 @@
+.markets {
+    width: 100%;
+    padding: 4rem 1rem;
+    background-color: var(--color-white);
+}
+
+.markets__container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.markets__header {
+    margin-bottom: 4rem;
+}
+
+.markets__heading {
+    font-size: 2.25rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--color-gray-900);
+}
+
+.markets__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.markets__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.markets__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.markets__icon svg {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+}
+
+.markets__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.markets__item-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-gray-900);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.markets__description {
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.markets__item::after {
+    content: "";
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        var(--color-gray-300) 20%,
+        var(--color-gray-300) 80%,
+        transparent 100%
+    );
+}
+
+.markets__item:last-child::after {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .markets {
+        padding: 6rem 2rem;
+    }
+    
+    .markets__header {
+        margin-bottom: 6rem;
+    }
+    
+    .markets__heading {
+        font-size: 3rem;
+    }
+    
+    .markets__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .markets__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    .markets__item::after {
+        display: block;
+    }
+    
+    .markets__heading {
+        font-size: 3.75rem;
+    }
+    
+    .markets__item-title {
+        font-size: 1.25rem;
+    }
+    
+    .markets__description {
+        font-size: 1rem;
+    }
+}

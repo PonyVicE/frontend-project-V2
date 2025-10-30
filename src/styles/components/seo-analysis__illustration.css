@@ -1,0 +1,17 @@
+.seo-analysis__illustration-container {
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .seo-analysis__illustration-container {
+    order: 1;
+  }
+}
+
+.seo-analysis__illustration {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}

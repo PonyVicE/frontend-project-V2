@@ -1,6 +1,29 @@
 :root {
   color-scheme: light;
 
-  --color-primary: var(--color-white);
-  --color-secondary: var(--color-black);
+  /* Фоны */
+  --background: var(--color-white);
+  --background-footer: var(--color-gray-900);
+  --surface: var(--color-gray-100);
+  --surface-secondary: var(--color-gray-200);
+
+  /* Текст */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-700);
+  --text-tertiary: var(--color-gray-600);
+  --text-inverse: var(--color-white);
+  --text-inverse-secondary: rgb(255 255 255 / 60%);
+
+  /* Основные цвета бренда */
+  --primary: var(--color-primary-500);
+  --secondary: var(--color-secondary-500);
+
+  /* Состояния */
+  --success: var(--color-success-500);
+  --danger: var(--color-danger-500);
+  --warning: var(--color-warning-500);
+  --info: var(--color-info-500);
+
+  /* Границы */
+  --border: var(--color-gray-300);
 }

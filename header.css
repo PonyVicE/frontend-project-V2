@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.header__title {
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--text-inverse);
+  padding-bottom: 32px;
+}
+
+.header__subtitle {
+  display: inline-block;
+  max-width: 810px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-inverse-secondary);
+  padding-bottom: 40px;
+}
+
+/* --- Адаптивность  --- */
+
+@media (width <= 1024px) {
+  .header__title {
+    font-size: 60px;
+    padding-bottom: 24px;
+  }
+
+  .header__subtitle {
+    font-size: 18px;
+    max-width: 600px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (width <= 768px) {
+  .header__title {
+    font-size: 48px;
+    padding-bottom: 20px;
+  }
+
+  .header__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    padding-bottom: 24px;
+  }
+}
+
+@media (width <= 480px) {
+  .header__title {
+    font-size: 36px;
+    padding-bottom: 16px;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+    padding-bottom: 16px;
+  }
+  
+}
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5rem;
+  min-height: 3.25rem;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  letter-spacing: 0.03125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn--outline:hover {
+  background: var(--color-white);
+  color: var(--primary);
+}
+
+.phone-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 178px;
+  height: 48px;
+}
+
+.phone-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+
+.phone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phone-label {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--text-inverse);
+  opacity: 0.6;
+}
+
+.phone-number {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--text-inverse);
+  text-decoration: none;
+}
+
+.phone-number:hover {
+  color: var(--primary);
+}

@@ -4,14 +4,20 @@
   min-height: 100vh;
 }
 
-.page_header {
+.page__header {
   flex-shrink: 0;
+  background-image: url('/images/background.jpg');
+  min-height: 68vh;
 }
 
-.page_content {
+.page__content {
   flex-grow: 1;
+  background-color: var(--background);
 }
 
-.page_footer {
+.page__footer {
   flex-shrink: 0;
+  background-color: var(--background-footer);
+  color: var(--color-white);
+  padding-top: 80px;
 }

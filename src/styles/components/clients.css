@@ -1,0 +1,36 @@
+.clients {
+  padding: 64px 16px;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: center;
+  gap: 102px;
+  flex-wrap: wrap;
+}
+
+@media (width <= 1024px) {
+  .clients__list {
+    gap: 60px;
+  }
+}
+
+@media (width <= 768px) {
+  .clients {
+    padding: 40px;
+  }
+
+  .clients__list {
+    gap: 40px;
+  }
+}
+
+@media (width <= 480px) {
+  .clients {
+    padding-top: 30px;
+  }
+
+  .clients__list {
+    gap: 20px;
+  }
+}

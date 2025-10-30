@@ -1,0 +1,146 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1230px;
+  margin: 20px auto 0;
+  padding: 0 16px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  padding-right: 60px;
+  flex-shrink: 0;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+  padding: 13px 0;
+  flex-grow: 1;
+  color: var(--text-inverse);
+  font-size: 16px;
+  line-height: 160%;
+  min-width: 0;
+}
+
+.nav__btn {
+  border-radius: 4px;
+  height: 52px;
+  min-width: 199px;
+  background: var(--primary);
+  color: var(--text-inverse);
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  border-color: transparent;
+  font-family: Lato, sans-serif;
+  flex-shrink: 0;
+}
+
+.nav__btn:hover {
+  background: var(--text-inverse);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-inverse-secondary);
+}
+
+.nav__link:hover {
+  color: var(--text-inverse);
+  font-weight: 700;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-white);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  padding: 8px;
+}
+
+.dropdown__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav__item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__item:hover .nav__link-icon--dropdown {
+  transform: rotate(180deg);
+}
+
+.nav__link-icon--dropdown {
+  transition: transform 0.3s ease;
+}
+
+.dropdown__link {
+  font-size: 16px;
+  color: var(--text-inverse-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown__link:hover {
+  color: var(--text-inverse);
+}
+
+@media (width <= 1024px) {
+  .nav__list {
+    gap: 24px;
+  }
+}
+
+@media (width <= 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .nav__btn {
+    width: 100%;
+  }
+}
+
+@media (width <= 480px) {
+  .nav__list {
+    gap: 8px;
+  }
+}
